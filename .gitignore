@@ -1,0 +1,65 @@
+# --- Java & Compilación ---
+*.class
+*.log
+bin/
+target/
+out/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- NetBeans Específico ---
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+build/
+.nb-cache/
+
+# --- Eclipse Específico ---
+.metadata/
+.settings/
+.project
+.classpath
+.factorypath
+.buildpath
+*.launch
+.externalToolBuilders/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# --- Otros Editores (VS Code / IntelliJ) ---
+.idea/
+*.iml
+*.iws
+.vscode/
+*.code-workspace
+
+# --- Herramientas de Construcción (Maven / Gradle) ---
+.gradle/
+/build/
+!gradle-wrapper.jar
+.project
+.classpath
+.factorypath
+.settings/
+
+# --- Variables de Entorno y Configuración Local ---
+.env
+.env.local
+.env.*.local
+*.properties.local
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+hs_err_pid*
+replay_pid*
