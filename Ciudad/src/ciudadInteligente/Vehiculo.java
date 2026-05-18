@@ -13,6 +13,14 @@ abstract class Vehiculo {
 		return this.id;
 	}
 
+        public static int getContador() {
+            return contador;
+        }
+
+        public static void setContador(int contador) {
+            Vehiculo.contador = contador;
+        }
+
 	public abstract void patronMovimiento();
 
 }
