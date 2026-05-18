@@ -13,13 +13,11 @@ public class CentroControl {
         
         public void listarVehiculos(){
         
-        System.out.printf("|-10%s |-10%s", "Vehiculo","ID");
+        System.out.printf("|%-25s |%-10s |%n", "Tipo de Vehiculo","ID");
         System.out.println("-----------------------------------------");
         
         for(Vehiculo v : vehiculos){
-            System.out.printf("|-10%s |-10%s ",v.getClass().getSimpleName(),v.getId());
-            
-            
+            System.out.printf("|%-25s |%-10s |%n",v.getClass().getSimpleName(),v.getId());
             
         }
         
