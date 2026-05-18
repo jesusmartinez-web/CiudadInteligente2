@@ -9,10 +9,10 @@ public class main {
         
 
 
-        CentroControl.registrarUnidad(auto);
-        CentroControl.registrarUnidad(moto);
-        CentroControl.registrarUnidad(camion);
-        CentroControl.registrarUnidad(dron);
+        CentroControl.crearVehiculo(auto);
+        CentroControl.crearVehiculo(moto);
+        CentroControl.crearVehiculo(camion);
+        CentroControl.crearVehiculo(dron);
         CentroControl.monitorearFlota();
 
     }
