@@ -6,6 +6,7 @@ public class main {
         Motoneta moto = new Motoneta();
         CamionAutonomo camion = new CamionAutonomo();
         DronTransporte dron = new DronTransporte();
+        CentroControl centro = new CentroControl();
         
 
 
@@ -13,7 +14,7 @@ public class main {
         CentroControl.crearVehiculo(moto);
         CentroControl.crearVehiculo(camion);
         CentroControl.crearVehiculo(dron);
-        CentroControl.monitorearFlota();
+        centro.listarVehiculos();
 
     }
 }
