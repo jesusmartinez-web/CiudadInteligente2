@@ -56,4 +56,9 @@ public class CentroControl {
                 System.out.println("Vehículo con ID " + ID + " no encontrado.");
             }
         }
+       
+        public static long contarVehiculos() {
+            return vehiculos.stream().count();
+        }
+        
 }
