@@ -26,7 +26,7 @@ public class CentroControl {
             vehiculos.forEach(v-> v.patronMovimiento());
 	}
         
-        public static Vehiculo buscarVehiculo(int ID){
+        public static Vehiculo buscarVehiculoID(int ID){
             return vehiculos.stream().filter(v -> v.getId() == ID)
                     .findFirst().orElse(null);
             
@@ -48,7 +48,7 @@ public class CentroControl {
         }
         
         public static void modificarVehiculo(int ID, String nuevoPatron) {
-            Vehiculo v = buscarVehiculo(ID);
+            Vehiculo v = buscarVehiculoID(ID);
             if (v != null) {
                 v.setPatron(nuevoPatron);
                System.out.println("Patrón del vehículo " + ID + " modificado con éxito.");
@@ -59,6 +59,12 @@ public class CentroControl {
        
         public static long contarVehiculos() {
             return vehiculos.stream().count();
+        }
+        
+        public static List<Vehiculo> buscarVehiculoTipo(String tipo) {
+            return vehiculos.stream()
+                .filter(v -> v.getClass().getSimpleName().equalsIgnoreCase(tipo))
+                .toList();
         }
         
 }
