@@ -4,10 +4,20 @@ abstract class Vehiculo {
 
 	private int id = 0;
 	private static int contador = 0;
+        private String patron;
 
-	public Vehiculo() {
+	public Vehiculo(String patron) {
 		this.id = contador++;
+                this.patron = patron;
 	}
+        
+        public String getPatron(){
+            return this.patron;
+        }
+        
+        public void setPatron(String patron){
+            this.patron = patron;
+        }
 
 	public int getId() {
 		return this.id;
