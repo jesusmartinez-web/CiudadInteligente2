@@ -2,7 +2,7 @@ package ciudadInteligente;
 
 import java.util.ArrayList;
 import java.util.List;
-import static java.util.stream.Collectors.toList;
+
 
 public class CentroControl {
 	private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
@@ -57,6 +57,15 @@ public class CentroControl {
             } else {
                 System.out.println("Vehículo con ID " + ID + " no encontrado.");
             }
+        }
+        
+        public static void reportarEstado(){
+            System.out.printf("|%-25s |%-25s |%n", "Tipo de Vehiculo","Estado");
+            System.out.println("-----------------------------------------");            
+            
+            vehiculos.forEach(v -> System.out.println );
+          
+            
         }
        
         public static long contarVehiculos() {

@@ -12,7 +12,10 @@ abstract class Vehiculo {
     }
         
     public String getEstado(){
-        return this.estado;
+        if(estado == null){
+            return "Inactivo";
+        }
+        else return this.estado;
     }
         
     public void setEstado(String patron){
