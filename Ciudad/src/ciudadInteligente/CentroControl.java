@@ -63,7 +63,7 @@ public class CentroControl {
             System.out.printf("|%-25s |%-25s |%n", "Tipo de Vehiculo","Estado");
             System.out.println("-----------------------------------------");            
             
-            vehiculos.forEach(v -> System.out.println );
+            vehiculos.forEach(v -> System.out.printf("|%-25s |%-25s |%n", v.getClass().getSimpleName(),v.getEstado()));
           
             
         }
