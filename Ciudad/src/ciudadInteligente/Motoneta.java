@@ -14,7 +14,7 @@ public class Motoneta extends Vehiculo implements IConectable{
 
 	@Override
 	public void patronMovimiento() {
-		System.out.println(this.getPatron());
+		System.out.println(this.getEstado());
 	}
 
 	

@@ -4,19 +4,19 @@ abstract class Vehiculo {
 
     private int id = 0;
     private static int contador = 0;
-    private String patron;
+    private String estado = null;
 
     public Vehiculo(String patron) {
         this.id = contador++;
-        this.patron = patron;
+        this.estado = patron;
     }
         
-    public String getPatron(){
-        return this.patron;
+    public String getEstado(){
+        return this.estado;
     }
         
-    public void setPatron(String patron){
-        this.patron = patron;
+    public void setEstado(String patron){
+        this.estado = patron;
     }
 
     public int getId() {

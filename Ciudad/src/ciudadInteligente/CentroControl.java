@@ -49,10 +49,10 @@ public class CentroControl {
            vehiculos.removeIf(v -> v.getId() == ID);
         }
         
-        public static void modificarVehiculo(int ID, String nuevoPatron) {
+        public static void modificarVehiculo(int ID, String nuevoEstado) {
             Vehiculo v = buscarVehiculoID(ID);
             if (v != null) {
-                v.setPatron(nuevoPatron);
+                v.setEstado(nuevoEstado);
                System.out.println("Patrón del vehículo " + ID + " modificado con éxito.");
             } else {
                 System.out.println("Vehículo con ID " + ID + " no encontrado.");

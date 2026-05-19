@@ -8,7 +8,7 @@ public class Automovil extends Vehiculo {
 	
         @Override
 	public void patronMovimiento() {
-		System.out.println(this.getPatron());
+		System.out.println(this.getEstado());
 	}
 
 }
