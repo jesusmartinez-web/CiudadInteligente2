@@ -16,11 +16,9 @@ public class CentroControl {
         System.out.printf("|%-25s |%-10s |%n", "Tipo de Vehiculo","ID");
         System.out.println("-----------------------------------------");
         
-        for(Vehiculo v : vehiculos){
-            System.out.printf("|%-25s |%-10s |%n",v.getClass().getSimpleName(),v.getId());
+        vehiculos.forEach(v -> System.out.printf("|%-25s |%-10s |%n",v.getClass().getSimpleName(),v.getId()));
             
-        }
-        
+            
         }
 
 	public static void monitorearFlota() {
