@@ -28,4 +28,14 @@ public class CentroControl {
 		}
 	}
         
+        public static void eliminarVehiculo(int ID){
+            for(int i=0; i<vehiculos.size();i++){
+                int tempID = vehiculos.get(i).getId();
+                if(ID == tempID){
+                    vehiculos.remove(i);
+                    break;
+                }
+            }
+        }
+        
 }
