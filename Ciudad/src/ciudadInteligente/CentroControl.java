@@ -1,6 +1,8 @@
 package ciudadInteligente;
 
 import java.util.ArrayList;
+import java.util.List;
+import static java.util.stream.Collectors.toList;
 
 public class CentroControl {
 	private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
@@ -17,9 +19,8 @@ public class CentroControl {
         System.out.println("-----------------------------------------");
         
         vehiculos.forEach(v -> System.out.printf("|%-25s |%-10s |%n",v.getClass().getSimpleName(),v.getId()));
-            
-            
         }
+        
 
 	public static void monitorearFlota() {
             vehiculos.forEach(v-> v.patronMovimiento());
@@ -30,6 +31,17 @@ public class CentroControl {
                     .findFirst().orElse(null);
             
         }
+        public static List<Vehiculo> vehiculosIConectables(){
+            return vehiculos.stream().filter(v -> v instanceof IConectable).toList();
+        }
+        public static List<Integer> listaDeId(){
+            return vehiculos.stream().map(v -> v.getId()).toList();
+        }
+        public static List<Vehiculo> ordenarPorTipo() {
+            return vehiculos.stream()
+            .sorted((v1, v2) -> v1.getClass().getSimpleName().compareTo(v2.getClass().getSimpleName()))
+            .toList(); 
+}
         
         public static void eliminarVehiculo(int ID){
            vehiculos.removeIf(v -> v.getId() == ID);
