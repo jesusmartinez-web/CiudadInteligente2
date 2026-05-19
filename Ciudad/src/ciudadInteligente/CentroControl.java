@@ -22,11 +22,14 @@ public class CentroControl {
         }
 
 	public static void monitorearFlota() {
-		for (int i = 0; i < vehiculos.size(); i++) {
-			vehiculos.get(i).patronMovimiento();
-
-		}
+            vehiculos.forEach(v-> v.patronMovimiento());
 	}
+        
+        public static Vehiculo buscarVehiculo(int ID){
+            return vehiculos.stream().filter(v -> v.getId() == ID)
+                    .findFirst().orElse(null);
+            
+        }
         
         public static void eliminarVehiculo(int ID){
            vehiculos.removeIf(v -> v.getId() == ID);
