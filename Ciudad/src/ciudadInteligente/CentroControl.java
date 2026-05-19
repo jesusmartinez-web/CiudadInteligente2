@@ -41,10 +41,19 @@ public class CentroControl {
             return vehiculos.stream()
             .sorted((v1, v2) -> v1.getClass().getSimpleName().compareTo(v2.getClass().getSimpleName()))
             .toList(); 
-}
+        }
         
         public static void eliminarVehiculo(int ID){
            vehiculos.removeIf(v -> v.getId() == ID);
         }
         
+        public static void modificarVehiculo(int ID, String nuevoPatron) {
+            Vehiculo v = buscarVehiculo(ID);
+            if (v != null) {
+                v.setPatron(nuevoPatron);
+               System.out.println("Patrón del vehículo " + ID + " modificado con éxito.");
+            } else {
+                System.out.println("Vehículo con ID " + ID + " no encontrado.");
+            }
+        }
 }
