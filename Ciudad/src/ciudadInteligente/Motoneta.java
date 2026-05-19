@@ -3,7 +3,7 @@ package ciudadInteligente;
 public class Motoneta extends Vehiculo implements IConectable{
 	
 	public Motoneta() {
-		super();
+		super("La motoneta se dirige al centro de la ciudad");
 	}
 
 	@Override
@@ -14,8 +14,7 @@ public class Motoneta extends Vehiculo implements IConectable{
 
 	@Override
 	public void patronMovimiento() {
-		System.out.println("La motoneta se dirige al centro de la ciudad");
-		
+		System.out.println(this.getPatron());
 	}
 
 	

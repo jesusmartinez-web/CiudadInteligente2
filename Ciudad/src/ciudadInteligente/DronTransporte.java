@@ -3,15 +3,12 @@ package ciudadInteligente;
 public class DronTransporte extends Vehiculo {
 	
 	public DronTransporte() {
-		super();
+		super("Despegue vertical, navegación por coordenadas de altitud y aterrizaje en puntos de entrega.");
 	}
 
 	@Override
 	public void patronMovimiento() {
-		
-		System.out.println("Despegue vertical, navegación por coordenadas de altitud y aterrizaje en puntos de entrega.");
-		
+		System.out.println(this.getPatron());
 	}
-
 }
 

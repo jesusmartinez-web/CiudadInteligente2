@@ -4,13 +4,13 @@ public class CamionAutonomo extends Vehiculo implements IConectable {
 	
 	
 	public CamionAutonomo() {
-		super();
+		super("Manteniendo siempre la derecha \n Frenado cuando el vehiculo del frente esta a menos de 4 metros.");
 	}
 	
 
 	@Override
 	public void patronMovimiento() {
-		System.out.println("Manteniendo siempre la derecha \n Frenado cuando el vehiculo del frente esta a menos de 4 metros.");
+		System.out.println(this.getPatron());
 		
 	}
 
