@@ -6,9 +6,9 @@ abstract class Vehiculo {
     private static int contador = 0;
     private String estado = null;
 
-    public Vehiculo(String patron) {
+    public Vehiculo(String estado) {
         this.id = contador++;
-        this.estado = patron;
+        this.estado = estado;
     }
         
     public String getEstado(){
@@ -18,8 +18,8 @@ abstract class Vehiculo {
         else return this.estado;
     }
         
-    public void setEstado(String patron){
-        this.estado = patron;
+    public void setEstado(String estado){
+        this.estado = estado;
     }
 
     public int getId() {
