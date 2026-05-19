@@ -34,9 +34,11 @@ public class CentroControl {
         public static List<Vehiculo> vehiculosIConectables(){
             return vehiculos.stream().filter(v -> v instanceof IConectable).toList();
         }
+        
         public static List<Integer> listaDeId(){
             return vehiculos.stream().map(v -> v.getId()).toList();
         }
+        
         public static List<Vehiculo> ordenarPorTipo() {
             return vehiculos.stream()
             .sorted((v1, v2) -> v1.getClass().getSimpleName().compareTo(v2.getClass().getSimpleName()))
@@ -64,6 +66,12 @@ public class CentroControl {
         public static List<Vehiculo> buscarVehiculoTipo(String tipo) {
             return vehiculos.stream()
                 .filter(v -> v.getClass().getSimpleName().equalsIgnoreCase(tipo))
+                .toList();
+        }
+        
+        public static List<Vehiculo> ordenarPorId() {
+            return vehiculos.stream()
+                .sorted((v1, v2) -> Integer.compare(v1.getId(), v2.getId()))
                 .toList();
         }
         
